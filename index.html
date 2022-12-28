@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
+    <meta name="author" content="iGen_Theme_Mate">
+    <meta name="keywords" content="HTML,CSS,JavaScript Document for Mass SMS and Email Marketing Tools">
+    <meta name="description" content="Mass Email and SMS Marketing tools">
+    <title>XSender - Install Instructions</title>
+    <!--Favicon-->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <!--Bootstrap Stylesheet-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <!--FontAwesome Stylesheet-->
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <!--Main Stylesheet-->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!--Responsive Stylesheet-->
+    <link rel="stylesheet" type="text/css" href="css/responsive.css"> 
+</head>
+
+
+<body class="body"> 
+<div class="wrap-body"> 
+    <div class="container-fluid">
+        <div class="side-menu-bar" id="sidebar-menu">
+            <div class="logo">
+                <a href="#" class="">
+                    <span><img src="images/logo.png" alt=""></span>
+                </a>
+            </div>
+            <nav class="nav">
+                <ul id="mainNav" class="navigation navi-list">
+                    <li><a class="navigation_link" href="#Overview"><i class="fa fa-info-circle"></i> Overview</a></li>
+                    <li><a class="navigation_link" href="#Requirements"><i class="fa fa-server"></i> Server Requirements</a></li> 
+                    <li><a class="navigation_link" href="#Installation"><i class="fa fa-cloud-upload"></i> Installation</a></li>
+                    <li><a class="navigation_link" href="#Structure"><i class="fa fa-folder-open-o"></i> Web App File Structure</a></li>
+                    <li><a class="navigation_link" href="#CRON"><i class="fa fa-calendar"></i> CRON Job Setup</a></li> 
+                    <li><a class="navigation_link" href="#Admin-Panel"> <i class="fa fa-tachometer"></i> Admin Panel</a></li> 
+                    <li><a class="navigation_link" href="#Basic-Control"> <i class="fa fa-tachometer"></i> Admin Basic Control</a></li> 
+                    <li><a class="navigation_link" href="#Mail-Config"><i class="fa fa-envelope"></i> Mail Config</a></li>
+                    <li><a class="navigation_link" href="#SMS-Gateways"><i class="fa fa-envelope"></i> SMS API & Android Gateways</a></li>
+                    <li><a class="navigation_link" href="#Payment-Gateways"><i class="fa fa-credit-card"></i> Payment Gateways Control</a></li>
+                    <li><a class="navigation_link" href="#Email-Template"><i class="fa fa-bell-o"></i> Global Mail Notification</a></li>
+                    <li><a class="navigation_link" href="#User-Dashboard"><i class="fa fa-exchange"></i> User Dashboard</a></li>
+                    <li><a class="navigation_link" href="#Connect-App"><i class="fa fa-android"></i> Connect SMS App</a></li>
+                    <li><a class="navigation_link" href="#Connect-WhatsApp"><i class="fa fa-whatsapp"></i> Connect WhatsApp</a></li>
+                    <li><a class="navigation_link" href="#Update"><i class="fa fa-cloud-upload"></i> Update Application</a></li>
+                    <li><a class="navigation_link" href="https://firebasestorage.googleapis.com/v0/b/igenenvato.appspot.com/o/xsender%2Fxsender-v1.2.apk?alt=media&token=89b2cb86-534a-48f2-a2ef-d24f39f99f6b" target="_blank"><i class="fa fa-download"></i> Download SMS GW APP</a></li>
+                    <li><a class="navigation_link" href="#Support"><i class="fa fa-headphones"></i> Support</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-9 col-sm-offset-3">
+                <div id="content">
+                    <div id="Overview" class="page-section hero padding-bottom">
+                        <h1 class="font-600">XSender - Mass Email and Messaging Marketing Tools</h1>
+                        <hr>
+
+                        <h2>Overview</h2>
+                        <p><span class="font-600 ">XSender</span> is a mass email and text message sending web applicaiton tools for sending text message via 4 popular sms API gateway and using most of powerful android sms sender app which supports from android version 5.0 and also your own country mobile netowrk sim for sending sms. Start you own SaaS platform without any restrictions for sending sms through android device.
+                        </p>
+
+                        <p>You can manage your customer database from XSender mordern admin panel and also buy dynamic subcription plan for SMS and Email plan via different payment gateway.</p>
+
+                        <p><span class="font-600 ">XSender</span> manage bulk requests smoothly using a powerful Laravel Queue system and also manage server performance.</p>
+
+                    </div>
+
+                    <div id="Requirements" class="page-section padding-bottom">
+                        <h2>Server Requirements</h2>
+                        <ul class="requirement-list">
+                            <li>⊛ PHP Version 7.4 or above</li>
+                            <li>⊛ MySQL Version 5.7+ or MariaDB version 10.2+</li> 
+                            <li>⊛ Ctype PHP Extension</li>
+                            <li>⊛ Fileinfo PHP extension</li>
+                            <li>⊛ JSON PHP Extension</li>
+                            <li>⊛ Mbstring PHP Extension</li>
+                            <li>⊛ OpenSSL PHP Extension</li>
+                            <li>⊛ PDO PHP Extension</li>
+                            <li>⊛ PDO_MYSQL PHP Extension</li>
+                            <li>⊛ Tokenizer PHP Extension</li>
+                            <li>⊛ XML PHP Extension</li>
+                            <li>⊛ CURL PHP Extension</li>
+                            <li>⊛ GD PHP Extension</li> 
+                        </ul>
+                    </div> 
+
+                    <div id="Installation" class="page-section padding-bottom">
+                        <h2>How To Install on Local and Hosting Server</h2>
+                        <hr>
+                        <p> 
+                            <span class="font-600 ">XSender</span> web application installation process is very easy just follow the instructions:
+                            <hr>
+
+                            <ul>
+                                <li><strong>Step-1:</strong> Create a database into MySQL server using phpMyAdmin or MySQL Command line</li>
+                                <li><strong>Step-2:</strong> Unzip the Xsender project.zip file into your web server root or htdocs or subdomain directory</li>
+                                <li><strong>Step-3:</strong> Now go to browser then put url for installing script like this:-<code>http://your-domain.com/install or if localhost then http://localhost/<code>{project_directory}</code>/install</code></li>
+                                <li><strong>Step-4:</strong> In this step software check server requirements and permissions for final installation and give all the info</li>
+                                <li><strong>Step-5:</strong> After successfully install set up all basic settings from admin panel</li>
+                            </ul> 
+                            <br>
+                                <p>Here all the steps are described in details with screenshots.</p>
+
+                            <br>
+                            
+                        </p>
+
+                        <p><h4>Local Installation Instructions</h4></p>
+
+                        <li>For local installation you need to install local server on your Device[Laptop or desktop] like:- <a href="https://www.apachefriends.org/download.html" target="_blank">XAMPP</a>, <a href="https://www.wampserver.com/en/#download-wrapper" target="_blank">WAMPP</a>, <a href="https://laragon.org/download/">Laragon</a>, etc...</li>
+                        <br>
+                        <ul class="requirement-list">
+                            <li><b>Local-Install-Step-1:</b> Create Database to MySQL server using phpMyAdmin.Then Go to browser and browse <code>http://localhost/{project_dir}/phpmyadmin</code>[it's by default]. So in my case, I'm using Laragon(but all the local installation process is almost same) so follow the instructions seeing the screenshots.</li>
+                            <div class="code-block ">
+                                <img src="images/db/local-db-1.png" class="w-100" alt="">
+                            </div> 
+                            <br>
+                            <li><b>Local-Install-Step-2:</b> Now extract software script into local server <code>www</code> directory that you have downloaded from CodeCanyon. In your case local server <code>www</code> directory may be like that <code>htdocs, public_html, root</code> etc...</li>
+                            <div class="code-block">
+                                <img src="images/file/local-file-1.png" class="w-100" alt="">
+                            </div>
+                            <br>
+                            <li><b>Local-Install-Step-3:</b> In local server <code>www</code> directory create new folder into <code>www</code> for the project. And put all extract all script file here</li>
+                            <div class="code-block">
+                                <img src="images/file/local-file-2.png" class="w-100" alt="">
+                            </div>
+
+                            <br>
+                            <li>Now browse the following url <code>http://localhost/{project_dir}/install</code>. And see the next <a href="#install-script-process">Steps ↓</a></li>
+
+                            <li>You can see the video from <a href="https://youtu.be/71PndnehgCw" target="_blank">Here</a>. for better understanding</li>
+                        </ul>
+                        <hr><br>
+                        <p><h4>cPanel Installation Instructions</h4></p>
+                        <ul class="requirement-list">
+
+                            <li><b>cPanel-Step 1 :</b> Create mySQL Database, Database User and Add DB-User to MySQL-Datatbase.</li>
+
+                            <p>⊛ Go to MySQL® Database Wizard</p>
+                            <div class="code-block ">
+                                <img src="images/db/db-1.png" class="w-100" alt="">
+                            </div>
+                            <br><br>
+
+
+                            <p>⊛ Create A database on the New Database,s input field then click Next Step</p>
+                            <div class="code-block ">
+                                <img src="images/db/db-2.png" class="w-100" alt="">
+                            </div><br><br>
+
+                            <p>⊛ Write your database username & password then click Create User Button </p>
+                            <p>NB: Save to any notepad <code> database name, database username, database password  </code> for next step</p>
+                            <div class="code-block ">
+                                <img src="images/db/db-3.png" class="w-100" alt="">
+                            </div><br><br>
+
+                            <p>⊛ Now Add user to the database by checked ALL THE PRIVILEGES then Click Next Step</p>
+
+                            <div class="code-block ">
+                                <img src="images/db/db-4.png" class="w-100" alt="">
+                            </div><br><br>
+
+                            <p>⊛ You are Done! Click Return Home</p>
+                            <div class="code-block ">
+                                <img src="images/db/db-5.png" class="w-100" alt="">
+                            </div><br><br>
+ 
+
+                             
+                            <li>
+                                <b>cPanel-Step 2 :</b> Upload <span class="font-500"><img src="images/zip.png" alt="..." height="16"> project.zip</span> file to your hosting panel <span class="font-500 color-blue "><i class="fa fa-folder-open-o"></i> public_html or www or LAMP htdocs </span>  directory. Now extract it & then delete. See the below screenshots for your quick understanding.
+                                <p>♦ i</p>
+                                <div class="code-block ">
+                                    <img src="images/file/f-1.png" class="w-100" alt="">
+                                </div>
+                                <p>♦ ii</p>
+                                <div class="code-block ">
+                                    <img src="images/file/f-2.png" class="w-100" alt="">
+                                </div>
+                                <p>♦ iii</p>
+                                <div class="code-block ">
+                                    <img src="images/file/f-3.png" class="w-100" alt="">
+                                </div>
+                                <p>♦ iv</p>
+                                <div class="code-block ">
+                                    <img src="images/file/f-4.png" class="w-100" alt="">
+                                </div>
+ 
+                                <ul>
+                                    <li>⊛ If you upload it in <span class="font-500 color-blue "><i class="fa fa-folder-open-o"></i> public_html </span>  folder, then visit <span class="font-500">http://your-domain-name</span> in
+                                        browser.
+                                    </li>
+                                    <li>⊛
+                                        If you upload it in a folder in <span class="font-500 color-blue "><i class="fa fa-folder-open-o"></i> public_html </span> folder, then visit
+                                        <span class="font-500">http://your-domain-name/folder_name </span> in browser.
+                                    </li>
+                                    <li>⊛
+                                        If you upload it in your created subdomain folder, then visit
+                                        <span class="font-500">http://your-subdomain-name </span> in browser.
+                                    </li>
+                                    <li>⊛ If you upload it in a folder in your created subdomain folder, then visit
+                                        <span class="font-500">http://your-subdomain-name/folder_name </span>  in browser.
+                                    </li>
+                                </ul>
+
+                            </li>
+
+
+                              <br>
+                            
+                            <div id="install-script-process"> 
+                            <p>Now Your System is ready to install.</p>
+                            <br>
+                            <li><b>Step 4 :</b> Then you see an Easy Installation and Setup Wizard Check requirements for software setup . Click <code>Check Requirements</code>
+                            </li>
+                            <div class="code-block ">
+                                <img src="images/install/02.png" class="w-100" alt="">
+                            </div><br><br> 
+
+                            <li><b>Step 5 :</b> Server Requirements (if everything looks fine then click <code>Check Permissions</code>)</li>
+                            <div class="code-block ">
+                                <img src="images/install/03.png" class="w-100" alt="">
+                            </div>
+                            <br><br>
+
+                            <li><b>Step 6 :</b> Permissions Check up for Environment & Database Setup</li>
+                            <div class="code-block ">
+                                <img src="images/install/04.png" class="w-100" alt="">
+                            </div>
+                            <li>If Permission not given then give permission followed by this <a href="https://blog.cpanel.com/how-to-assign-permissions-to-files-and-folders-in-cpanel/" target="_blank">Link</a></li>
+                            <br><br>
+
+                            <li><b>Step 6 :</b> Put Your App Name and set <code>.env</code> Variable from this GUI and set your app base URL. If you setup from local sever then put <code>http://localhost/{project_dir}</code> If it's hosting then put your domain link <code>https://your-domain-name.com</code></li>
+                            <div class="code-block ">
+                                <img src="images/install/local-05.png" class="w-100" alt="">
+                                <img src="images/install/05.png" class="w-100" alt="">
+                            </div>
+                            <br><br>
+
+                            <li><b>Step 6 :</b> Give Database name Database User and Password Where you made it before in Step-1. Then Click Setup Application</code></li>
+                            <div class="code-block ">
+                                <img src="images/install/06.png" class="w-100" alt="">
+                            </div>
+                            <br><br>
+
+                            <li><b>Step 7 :</b> Installation Successfully finished, Now Click <code>Click here to exit</code>
+                            </li>
+                            <div class="code-block ">
+                                <img src="images/install/07.png" class="w-100" alt="">
+                            </div>
+                            </div>
+                            <br><br>
+
+
+                        </ul>
+
+                        <br>
+                        <p>Web Application setup done and ready to use.</p>
+                        <p>
+                            To login into admin panel using default username and password, visit: <br>
+                            <span class=" font-600">If it's localhost then browse <code>http://localhost/{project_dir}/admin</code> If it's cPanel then browse your domain <code>http://your-domain-name/admin</code></span><br>
+                            Username: admin <br>
+                            Password: admin <br>
+                            <li>You can change username and password from admin panel whenever you want.</li>
+                        </p>
+                        <br>
+                        <p><strong>NB:</strong> If you are unable to install the script, you can contact our support team and we are happy to sort out your issues as soon as possible.
+                            <br> We do offer free installation service in <span class="font-600">cPanel</span> but we do charge a tiny amount for Linux or other VPS Servers.
+                        </p>
+
+                    </div> 
+
+                    <div id="Structure" class="page-section padding-bottom">
+                        <h2>Web Application Structure</h2>
+                        <hr> 
+                        <br>
+                        <p>In our project with 4 items.</p>
+                        <div class="code-block ">
+                            <img src="images/app-structure.png" class="w-100" alt="">
+                        </div>
+                        <br>
+                        <p>
+                            On the <span class="font-600"><code>assets</code></span> folder, We store all kinds of assets like CSS,
+                            JS, Images. If you want To edit or change anything over CSS or js, please see
+                            this folder.
+                        </p>
+                        <p>
+                            On the <span class="font-600"><code>src</code></span> folders and files, We store the core of Laravel and maintain full MVC
+                            structure of this project.
+                        </p>
+                    </div>
+
+                    <div id="CRON" class="page-section padding-bottom">
+                        <h2>CRON Job Setup</h2>
+                        <hr>
+                        <p>You have installed the software successfully. Now set a cron jobs on your server for an autometic support from Android SMS Gateway App, Plan Subscription, SMS Schedule, Email Schedule, and Queue activity.</p>
+                        <div class="code-block ">
+                            <img src="images/cron/c-1.png" class="w-100" alt="Image">
+                        </div>
+                        <p>
+                            Set all the cron jobs to your hosting following the command links. You can also copy/paste the links from admin panel > System Settings > Settings > Modal <br>
+                            <code class=" font-600">curl -s http://your-domain-name/android/api/cron</code> <br>
+                            <code class=" font-600">curl -s http://your-domain-name/subscription/cron</code> <br>
+                            <code class=" font-600">curl -s http://your-domain-name/schedule/email/cron</code> <br>
+                            <code class=" font-600">curl -s http://your-domain-name/queue-work</code> <br>
+                        </p>
+                        <div class="code-block ">
+                            <img src="images/cron/c-2.png" class="w-100" alt="Image">
+                        </div>
+                    </div>
+
+
+                    <div id="Admin-Panel" class="page-section padding-bottom">
+                        <h2>Admin Dashboard</h2>
+                        <hr>
+                        <p>XSender comes with mordern admin panel design with a unique and easy way understating your business overall status. To check all features login into admin panel then see on the dashboard.</p>
+                        <img src="images/admin-dashboard.png" class="img-responsive" alt="Image">
+                    </div>
+
+                    <div id="Basic-Control" class="page-section padding-bottom">
+                        <h2>Basic Control</h2>
+                        <hr>
+                        <p>♦ You can control site configuration from System Settings.</p>
+                        <img src="images/basic-control.png" class="img-responsive" alt="Image">
+
+                        <br>
+                        <hr>
+                        <ul class="requirement-list">
+                            <li class="text mb-5">
+                                <strong>Site Name :</strong> The name for your website.
+                            </li> 
+                            <li class="text mb-5">
+                                <strong>Currency :</strong> You can set the base currency for your website.
+                            </li>
+                            <li class="text mb-5">
+                                <strong>Currency Symbol :</strong> You can set the currency symbol for your website.
+                            </li> 
+                            <li class="text mb-5">
+                                <strong>Country Code For Contact :</strong> You can set the country code from here for sending sms and also save the contacts in Group.
+                            </li>
+                            <li class="text mb-5">
+                                <strong>Time Zone :</strong> You can set the Application Time Zone.
+                            </li>
+                            <li class="text mb-5">
+                                <strong>Site Logo :</strong> You can set site logo from here.
+                            </li>
+                            <li class="text mb-5">
+                                <strong>Site Favicon :</strong> You can set site favicon from here.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="Mail-Config" class="page-section padding-bottom">
+                        <h2>Mail Configuration</h2>
+                        <hr>
+                        <p>You can set default mail sender from here and also change mail config data.</p>
+ 
+                        <img src="images/mail-config.png" class="img-responsive" alt="Image">
+                    </div>
+
+                    <div id="SMS-Gateways" class="page-section padding-bottom">
+                        <h2>API SMS Gateway and Android SMS Gateway</h2>
+                        <hr>
+                        <p>For sending SMS need to setup API SMS Gateway or Android SMS Gateway which is the cheapest solution and vast for SMS marketing. You can set API SMS gateway from here and set default API GW.</p>
+                        <img src="images/sms-api.png" class="img-responsive" alt="Image">
+                        <br>
+                        <img src="images/android-sms-gw.png" class="img-responsive" alt="Image">
+                    </div>
+
+                    <div id="Payment-Gateways" class="page-section padding-bottom">
+                        <h2>Payment Gateways</h2>
+                        <hr>
+                        <p>
+                            We have tried 4 Payment gateways for solving autometic buy SMS plan from their user panel and you can also control payment gateway configuration from admin panel.
+                        </p>
+                        <img src="images/payment-gateway.png" class="img-responsive" alt="Image">
+
+                    </div>
+
+                    <div id="Email-Template" class="page-section padding-bottom">
+                        <h2>Email Template For All Notifications</h2>
+                        <hr>
+                        <p>
+                            You can set your own email messaging template for emails and notifications.
+                            You can configure here your own email template to send the email.
+                        </p>
+                        <img src="images/mail-tem.png" class="img-responsive" alt="Image">
+                    </div>
+
+                    <div id="User-Dashboard" class="page-section padding-bottom">
+                        <h2>User Dashboard</h2>
+                        <hr>
+                        <p>
+                            User dashboard comes with more stable features option. We have tried to show overall user remaining credits, sales, current SMS, Email and Admin overview etc....
+                        </p>
+                        <img src="images/user-dashboard.jpg" class="img-responsive" alt="Image">
+                    </div>
+
+                    <div id="Connect-App" class="page-section padding-bottom">
+                        <h2>Connection Process and Sending SMS Via Android App</h2>
+                        <hr>
+                        <p>
+                            SMS Android Gateway app can reduce your SMS cost and it runs with dual SIM, The transferring process will be faster and smooth. Just Click Here to Download APK
+                            <a title="Android SMS Sending APP" href="https://firebasestorage.googleapis.com/v0/b/igenenvato.appspot.com/o/xsender%2Fxsender-v1.2.apk?alt=media&token=89b2cb86-534a-48f2-a2ef-d24f39f99f6b" target="_blank">here.</a> If not downloaded then contact with our support team, our support team can send you app within 10 min.
+                        </p>
+                        <br>
+                        <li>If you re-generate Laravel Passport Auth Key for REST API then following bellow command from you server <code>terminal</code> </li>
+                        <pre>
+                            <code>php artisan passport:install --uuids</code><br>
+                            <code>php artisan passport:keys</code>
+                        </pre>
+                        <img src="images/sms-app-user.png" class="img-responsive" alt="Image"> <br>
+                        <img src="images/sms-app.png" class="img-responsive" alt="Image">
+                        <br>
+                        <p>⊛ After completing all the steps, you can send SMS from your admin panel and the users can send SMS from their user panel as well. Android API Cron Jobs will assign the sending SMS to the SIM module and all the SMS status will be updated automatically.</p>
+                        <li> <strong>White-Label Solution:- </strong> You can customize Apps Logo, Name, and Package Name for up to 2 apps in each new version purchased. Just contact our support email or live chat with our support team.</li>
+                    </div>
+
+                    <div id="Connect-WhatsApp" class="page-section padding-bottom">
+                        <h2>Connection Process and Sending WhatsApp Message</h2>
+                        <hr>
+                        <p>
+                            <li>
+                                <strong>Step 1: </strong>Create an account from admin panel by input all the information
+                            </li>
+                            <img src="images/whatsapp-create.png" class="img-responsive" alt="Image"> <br>
+                            <li>
+                                <strong>Step 2: </strong>Click Scan Button from created WhatsApp account list
+                            </li>
+                            <img src="images/whatsapp-scan.png" class="img-responsive" alt="Image"> <br>
+                        </p> 
+                        <p>
+                            After connecting with the WhatsApp you can send message from admin and also user panel. You can scan and connect multiple WhatsApp account and you can send messages randomly.
+                        </p>
+                    </div>
+
+                    <div id="Update" class="page-section padding-bottom">
+                        <h2>How To Update Application</h2>
+                        <hr>
+                        <p> 
+                            <span class="font-600 ">XSender</span> 
+                            web application Update process is very easy just follow the instructions:
+                            <hr>
+                            <ul>
+                                <li><strong>Update Step-1:</strong> Upload File.zip the updated version File to your server or project root</li>
+                                <li><strong>Update Step-2:</strong> Unzip the Xsender File.zip file into your web server root or htdocs or subdomain directory</li>
+                                <li><strong>Update Step-3:</strong> Now go to database and import Update-V1.x.sql to your xsender database</li>
+                            </ul> 
+                            <p>Update Step-1</p>
+                            <div class="code-block ">
+                                <img src="images/update/u-1.png" class="w-100" alt="Image">
+                            </div>
+                            <br>
+                            <p>Update Step-2</p>
+                            <div class="code-block ">
+                                <img src="images/update/u-2.png" class="w-100" alt="Image">
+                            </div>
+                            <br>
+                            <p>Update Step-3</p>
+                            <div class="code-block ">
+                                <img src="images/update/u-3.png" class="w-100" alt="Image">
+                            </div>
+                        </p>
+                        <hr>
+                        <p>That's all and Enjoy the updated version</p>
+                    </div>
+
+                    <div id="Support" class="page-section padding-bottom support">
+                        <h2>Support</h2>
+                        <hr>
+                        <p>
+                            You can have a customer support services from us 24/7. For any kind of queries, please feel free to contact us for customization, support and suggestion. Your satisfaction is our utmost priority! We are absolutely committed to our valued customers to provide the best services.
+                        </p>
+
+
+                        <p class="color-blue  font-500"> 
+                            We do appreciate your valuable feedback and your feedback helps us to improve our business and services.
+                            <br>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </p>
+
+                        <div class="support">
+                            <h6 class="font-500">Support Email: 
+
+                                    <strong><a href="mailto:igensolutionsltd@gmail.com">igensolutionsltd@gmail.com</a></strong> 
+                            </h6>
+							<h6 class="font-500">Live Chat (Skype or Messenger): 
+                                <span style="color:orange;">
+                                    <a href="https://igensolutionsltd.com" style="color: orange!important;"> https://igensolutionsltd.com</a> 
+                                </span>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="footer-text">
+                    <p class="text-center">© 2022. All Rights Reserved By <a href="https://codecanyon.net/user/igensolutionsltd" class="color-orange">iGen Solutions Limited</a></p>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div> 
+
+<!--jQuery JS--> 
+<script src="js/jquery.min.js"></script>
+<!--Bootstrap JS-->
+<script src="js/bootstrap.min.js"></script>
+<!--Main JS-->
+<script src="js/main.js"></script>
+
+</body>
+</html>

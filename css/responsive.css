@@ -1,0 +1,43 @@
+/*---------------------------------------------------------------------
+    Large Desktops
+-----------------------------------------------------------------------*/
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .side-menu-bar {
+        width: 250px;
+    }
+}
+
+
+/*---------------------------------------------------------------------
+    Desktops
+----------------------------------------------------------------------*/
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .side-menu-bar {
+        width: 180px;
+    }
+    .side-menu-bar ul li a {
+        padding-left: 15px;
+    }
+}
+
+
+/*---------------------------------------------------------------------
+    Tablets Devices
+-----------------------------------------------------------------------*/
+
+@media only screen and (max-width: 767px) {
+    .side-menu-bar {
+        width: 100%;
+        height: 372px
+    }
+    .side-menu-bar ul li a {
+        padding-left: 0;
+        text-align: center;
+    }
+    #content{
+        margin: 400px 0 0
+    }
+}
+
